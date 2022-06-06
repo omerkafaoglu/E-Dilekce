@@ -1,0 +1,203 @@
+﻿body {
+    background-image: url('Images/gorevlisayfaarka.jpg');
+}
+#logo1 {
+    width: 170px;
+    height: 150px;
+}
+#anadiv {
+    width: 595px;
+    width: 842px;
+    position: relative;
+    left: 300px;
+    background-color: #FFFAFA;
+    box-shadow: 10px 10px 10px 15px #888888;
+}
+#Label3 {
+    position: relative;
+    left: 380px;
+    font-weight: bold;
+    color: #B22222;
+}
+#DropDownList1 {
+    position:relative;
+    left:350px;
+}
+#DropDownList3 {
+    position: relative;
+    left: 310px;
+}
+#Label2 {
+    position: relative;
+    left: 340px;
+    font-weight: bold;
+    color: #B22222;
+}
+#Label4 {
+    position: relative;
+    left: 340px;
+    font-weight: bold;
+    color: #B22222;
+}
+#TextBox3 {
+    position: relative;
+    left: 230px;
+}
+#Label5 {
+    position: relative;
+    left: 350px;
+    font-weight: bold;
+    color: #B22222;
+}
+#TextBox4 {
+    position: relative;
+    left: 53px;
+}
+#Label6 {
+    position: relative;
+    left: 360px;
+    font-weight: bold;
+    color: #B22222;
+}
+#Calendar1 {
+    position: relative;
+    left: 305px;
+}
+#Label7 {
+    position: relative;
+    left: 420px;
+    font-weight: bold;
+    color: #B22222;
+}
+#TextBox5 {
+    position: relative;
+    left:440px;
+}
+#Label8 {
+    position: relative;
+    left: 420px;
+    font-weight: bold;
+    color: #B22222;
+}
+#DropDownList2 {
+    position: relative;
+    left: 537px;
+}
+#Button2 {
+    position: relative;
+    left: 730px;
+}
+#TextBox3 {
+    text-align:start;
+    background: white;
+    border: 1px solid #A52A2A;
+    border-radius: 5px;
+    box-shadow: 0 0 5px 3px #A52A2A;
+    color: #666;
+    outline: none;
+}
+#TextBox4 {
+    background: white;
+    border: 1px solid #A52A2A;
+    border-radius: 5px;
+    box-shadow: 0 0 5px 3px #A52A2A;
+    color: #666;
+    outline: none;
+}
+#TextBox5 {
+    background: white;
+    border: 1px solid #A52A2A;
+    border-radius: 5px;
+    box-shadow: 0 0 5px 3px #A52A2A;
+    color: #666;
+    outline: none;
+}
+#Button2 {
+    width: 80px;
+    background-color: #E9967A;
+    border-top: 2px solid #999;
+    font-weight: bold;
+    font-style: unset;
+    border-left: 2px solid #999;
+    border-right: 1px solid #333;
+    border-bottom: 1px solid #333;
+    color: black;
+    text-align: start;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    right:50px;
+}
+#Button1 {
+    position: relative;
+    left: 490px;
+    border-top: 0px solid #999;
+    font-weight: bold;
+    font-style: unset;
+    border-left: 0px solid #999;
+    border-right: 0px solid #999;
+    border-bottom: 0px solid #999;
+    color:darkolivegreen;
+    text-align: start;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    box-shadow:3px 3px 5px #888888;
+}
+#TextBox1 {
+    position: relative;
+    left: 480px;
+    height: 29px;
+    width: 200px;
+    padding: 1px 20px;
+    border: 0px;
+    border-radius: 10px;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    box-shadow: 1px 1px 0 0 #FFF, 5px 5px 40px 2px #DDD inset;
+    -moz-box-shadow: 1px 1px 0 0 #FFF, 5px 5px 40px 2px #BBB inset;
+    -webkit-box-shadow: 1px 1px 0 0 #FFF, 5px 5px 40px 2px #BBB inset;
+    -webkit-background-clip: padding-box;
+    outline: 0;
+}
+#Label10 {
+    position: relative;
+    left: 900px;
+    font-weight: bold;
+    color: #B22222;
+}
+#GridView1 {
+    background-color:whitesmoke;
+    text-align:center;
+    font-style:italic;
+    font-weight:bold;
+}
+#Label9 {
+    position: relative;
+    left: 200px;
+    font-weight: bold;
+    color: #B22222;
+    font-size:40px;
+}
+#yazi1{
+    position:relative;
+    left:510px;
+    font-weight:bold;
+    color:dimgray;
+}
+#Button5 {
+    position: relative;
+    left: 150px;
+    border-top: 0px solid #999;
+    font-weight: bold;
+    font-style: unset;
+    border-left: 0px solid #999;
+    border-right: 0px solid #999;
+    border-bottom: 0px solid #999;
+    color: darkolivegreen;
+    text-align: start;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    box-shadow: 3px 3px 5px #888888;
+}

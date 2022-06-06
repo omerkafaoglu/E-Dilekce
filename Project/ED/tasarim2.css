@@ -1,0 +1,141 @@
+﻿#gorevligiris{
+    width:1290px;
+    height:475px;
+    background-image: url('Images/arkaplan.png');
+}
+#footer2{
+    height:39px;
+    width:100%;
+    bottom:0px;
+    position:fixed;
+}
+#footable{
+    height:39px;
+}
+#container {
+    background-color: #ffffff;
+    position: absolute;
+    left: 29%;
+    top: 30%;
+    box-shadow:10px 10px 5px #888888;
+}
+#TextBox2 {
+    padding: 1px 20px;
+    border: 0;
+    height: 25px;
+    width: 275px;
+    border-radius: 10px;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    box-shadow: 1px 1px 0 0 #FFF, 5px 5px 40px 2px #BBB inset;
+    -moz-box-shadow: 1px 1px 0 0 #FFF, 5px 5px 40px 2px #BBB inset;
+    -webkit-box-shadow: 1px 1px 0 0 #FFF, 5px 5px 40px 2px #BBB inset;
+    -webkit-background-clip: padding-box;
+    outline: 0;
+}
+#TextBox1 {
+    padding: 1px 20px;
+    border: 0;
+    height: 25px;
+    width: 275px;
+    border-radius: 10px;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    box-shadow: 1px 1px 0 0 #FFF, 5px 5px 40px 2px #BBB inset;
+    -moz-box-shadow: 1px 1px 0 0 #FFF, 5px 5px 40px 2px #BBB inset;
+    -webkit-box-shadow: 1px 1px 0 0 #FFF, 5px 5px 40px 2px #BBB inset;
+    -webkit-background-clip: padding-box;
+    outline: 0;
+}
+#Label1 {
+    color:#8B4513;
+}
+#Label2 {
+    color: #8B4513;
+}
+#logo{
+    height:150px;
+    width:170px;
+}
+#giris {
+    color: #008080;
+}
+#Label3 {
+    font-weight: bold;
+    color: #800000;
+}
+#kurum {
+    font-weight: bold;
+    text-align: center;
+    color:#672e3b;
+    font-size:25px;
+}
+.girisbuton {
+    width: 80px;
+    background-color: #E9967A;
+    border-top: 2px solid #999;
+    font-weight: bold;
+    font-style: unset;
+    border-left: 2px solid #999;
+    border-right: 1px solid #333;
+    border-bottom: 1px solid #333;
+    color: white;
+    text-align: start;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    position: relative;
+    left: 0px;
+    top: 28px;
+}
+#div2 {
+    position: absolute;
+    left: 465px;
+    top: 220px;
+}
+#kurumgiris {
+    width: 1290px;
+    height: 475px;
+    background-image: url('Images/kurumarka.png');
+}
+#div3 {
+    position: absolute;
+    left: 425px;
+    top: 210px;
+}
+#container2 {
+    background-color: #E6E6FA;
+    position: absolute;
+    left: 33%;
+    top: 30%;
+    box-shadow: 10px 10px 5px #888888;
+}
+#Button1{
+    position:relative;
+    left:0px;
+    top:-8px;
+}
+#gorevli {
+    font-weight: bold;
+    text-align: center;
+    color: #672e3b;
+    font-size: 25px;
+}
+#Button1{
+    width: 80px;
+    background-color: #E9967A;
+    border-top: 2px solid #999;
+    font-weight: bold;
+    font-style: unset;
+    border-left: 2px solid #999;
+    border-right: 1px solid #333;
+    border-bottom: 1px solid #333;
+    color: white;
+    text-align: start;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    position: relative;
+    left: 0px;
+    top: 19px;
+}

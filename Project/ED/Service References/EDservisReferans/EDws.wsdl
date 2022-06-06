@@ -1,0 +1,945 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="KurumlariGetir">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="il" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="KurumlariGetirResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="KurumlariGetirResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DilekceGetir">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="id" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DilekceGetirResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="DilekceGetirResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DilekceBul">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="icerik" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DilekceBulResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="DilekceBulResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AndroidGorevliGiris">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="TC_no" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sifre" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AndroidGorevliGirisResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="AndroidGorevliGirisResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="JSONGonderileriGetir">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="kriter" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="deger" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="JSONGonderileriGetirResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="JSONGonderileriGetirResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AndroidDilekceyiGetir">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="deger" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AndroidDilekceyiGetirResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="AndroidDilekceyiGetirResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="IlceleriCek">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="il" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="IlceleriCekResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="IlceleriCekResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="KurumEkle">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="kurum" type="tns:Kurum" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="Kurum">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Adi" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Adres" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Sifre" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Ilce" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Il" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Mail" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="KurumEkleResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="KurumEkleResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DilekceEkle">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="dilekce" type="tns:Dilekce" />
+            <s:element minOccurs="0" maxOccurs="1" name="G_TC_NO" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="Dilekce">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Baslik" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Sehir" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Konu" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Govde" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Tarih" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="G_adsoyad" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="G_mevki" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="DilekceEkleResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="DilekceEkleResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GorevliEkle">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="gorevli" type="tns:Gorevli" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="Gorevli">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Tc_no1" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Kurum_id" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Rutbe" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Adi" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Soyadi" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Sifre" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GorevliEkleResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GorevliEkleResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GonderiEkle">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="gonderi" type="tns:Gonderi" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="Gonderi">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="Id" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="Dilekce_id" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="Kurum_id" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Durum" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Tarih" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="Gonderen_tc_no" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Alici_tc_no" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GonderiEkleResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GonderiEkleResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="KurumGiris">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="mail" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sifre" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="KurumGirisResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="KurumGirisResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GorevliGiris">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="tc_no" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sifre" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GorevliGirisResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GorevliGirisResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GorevliBilgileriniGetir">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="TC" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GorevliBilgileriniGetirResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GorevliBilgileriniGetirResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="KurumBilgileriniGetir">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="id" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="KurumBilgileriniGetirResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="KurumBilgileriniGetirResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GonderileriGetir">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="kriter" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="deger" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GonderileriGetirResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GonderileriGetirResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="KurumGorevlileriniGetir">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="kurumID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="KurumGorevlileriniGetirResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="KurumGorevlileriniGetirResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GonderileriGetirKurum">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="kriter" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="deger" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GonderileriGetirKurumResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GonderileriGetirKurumResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GonderiGuncelle">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="kolon" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="gonderiId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="durum" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GonderiGuncelleResponse">
+        <s:complexType />
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="KurumlariGetirSoapIn">
+    <wsdl:part name="parameters" element="tns:KurumlariGetir" />
+  </wsdl:message>
+  <wsdl:message name="KurumlariGetirSoapOut">
+    <wsdl:part name="parameters" element="tns:KurumlariGetirResponse" />
+  </wsdl:message>
+  <wsdl:message name="DilekceGetirSoapIn">
+    <wsdl:part name="parameters" element="tns:DilekceGetir" />
+  </wsdl:message>
+  <wsdl:message name="DilekceGetirSoapOut">
+    <wsdl:part name="parameters" element="tns:DilekceGetirResponse" />
+  </wsdl:message>
+  <wsdl:message name="DilekceBulSoapIn">
+    <wsdl:part name="parameters" element="tns:DilekceBul" />
+  </wsdl:message>
+  <wsdl:message name="DilekceBulSoapOut">
+    <wsdl:part name="parameters" element="tns:DilekceBulResponse" />
+  </wsdl:message>
+  <wsdl:message name="AndroidGorevliGirisSoapIn">
+    <wsdl:part name="parameters" element="tns:AndroidGorevliGiris" />
+  </wsdl:message>
+  <wsdl:message name="AndroidGorevliGirisSoapOut">
+    <wsdl:part name="parameters" element="tns:AndroidGorevliGirisResponse" />
+  </wsdl:message>
+  <wsdl:message name="JSONGonderileriGetirSoapIn">
+    <wsdl:part name="parameters" element="tns:JSONGonderileriGetir" />
+  </wsdl:message>
+  <wsdl:message name="JSONGonderileriGetirSoapOut">
+    <wsdl:part name="parameters" element="tns:JSONGonderileriGetirResponse" />
+  </wsdl:message>
+  <wsdl:message name="AndroidDilekceyiGetirSoapIn">
+    <wsdl:part name="parameters" element="tns:AndroidDilekceyiGetir" />
+  </wsdl:message>
+  <wsdl:message name="AndroidDilekceyiGetirSoapOut">
+    <wsdl:part name="parameters" element="tns:AndroidDilekceyiGetirResponse" />
+  </wsdl:message>
+  <wsdl:message name="IlceleriCekSoapIn">
+    <wsdl:part name="parameters" element="tns:IlceleriCek" />
+  </wsdl:message>
+  <wsdl:message name="IlceleriCekSoapOut">
+    <wsdl:part name="parameters" element="tns:IlceleriCekResponse" />
+  </wsdl:message>
+  <wsdl:message name="KurumEkleSoapIn">
+    <wsdl:part name="parameters" element="tns:KurumEkle" />
+  </wsdl:message>
+  <wsdl:message name="KurumEkleSoapOut">
+    <wsdl:part name="parameters" element="tns:KurumEkleResponse" />
+  </wsdl:message>
+  <wsdl:message name="DilekceEkleSoapIn">
+    <wsdl:part name="parameters" element="tns:DilekceEkle" />
+  </wsdl:message>
+  <wsdl:message name="DilekceEkleSoapOut">
+    <wsdl:part name="parameters" element="tns:DilekceEkleResponse" />
+  </wsdl:message>
+  <wsdl:message name="GorevliEkleSoapIn">
+    <wsdl:part name="parameters" element="tns:GorevliEkle" />
+  </wsdl:message>
+  <wsdl:message name="GorevliEkleSoapOut">
+    <wsdl:part name="parameters" element="tns:GorevliEkleResponse" />
+  </wsdl:message>
+  <wsdl:message name="GonderiEkleSoapIn">
+    <wsdl:part name="parameters" element="tns:GonderiEkle" />
+  </wsdl:message>
+  <wsdl:message name="GonderiEkleSoapOut">
+    <wsdl:part name="parameters" element="tns:GonderiEkleResponse" />
+  </wsdl:message>
+  <wsdl:message name="KurumGirisSoapIn">
+    <wsdl:part name="parameters" element="tns:KurumGiris" />
+  </wsdl:message>
+  <wsdl:message name="KurumGirisSoapOut">
+    <wsdl:part name="parameters" element="tns:KurumGirisResponse" />
+  </wsdl:message>
+  <wsdl:message name="GorevliGirisSoapIn">
+    <wsdl:part name="parameters" element="tns:GorevliGiris" />
+  </wsdl:message>
+  <wsdl:message name="GorevliGirisSoapOut">
+    <wsdl:part name="parameters" element="tns:GorevliGirisResponse" />
+  </wsdl:message>
+  <wsdl:message name="GorevliBilgileriniGetirSoapIn">
+    <wsdl:part name="parameters" element="tns:GorevliBilgileriniGetir" />
+  </wsdl:message>
+  <wsdl:message name="GorevliBilgileriniGetirSoapOut">
+    <wsdl:part name="parameters" element="tns:GorevliBilgileriniGetirResponse" />
+  </wsdl:message>
+  <wsdl:message name="KurumBilgileriniGetirSoapIn">
+    <wsdl:part name="parameters" element="tns:KurumBilgileriniGetir" />
+  </wsdl:message>
+  <wsdl:message name="KurumBilgileriniGetirSoapOut">
+    <wsdl:part name="parameters" element="tns:KurumBilgileriniGetirResponse" />
+  </wsdl:message>
+  <wsdl:message name="GonderileriGetirSoapIn">
+    <wsdl:part name="parameters" element="tns:GonderileriGetir" />
+  </wsdl:message>
+  <wsdl:message name="GonderileriGetirSoapOut">
+    <wsdl:part name="parameters" element="tns:GonderileriGetirResponse" />
+  </wsdl:message>
+  <wsdl:message name="KurumGorevlileriniGetirSoapIn">
+    <wsdl:part name="parameters" element="tns:KurumGorevlileriniGetir" />
+  </wsdl:message>
+  <wsdl:message name="KurumGorevlileriniGetirSoapOut">
+    <wsdl:part name="parameters" element="tns:KurumGorevlileriniGetirResponse" />
+  </wsdl:message>
+  <wsdl:message name="GonderileriGetirKurumSoapIn">
+    <wsdl:part name="parameters" element="tns:GonderileriGetirKurum" />
+  </wsdl:message>
+  <wsdl:message name="GonderileriGetirKurumSoapOut">
+    <wsdl:part name="parameters" element="tns:GonderileriGetirKurumResponse" />
+  </wsdl:message>
+  <wsdl:message name="GonderiGuncelleSoapIn">
+    <wsdl:part name="parameters" element="tns:GonderiGuncelle" />
+  </wsdl:message>
+  <wsdl:message name="GonderiGuncelleSoapOut">
+    <wsdl:part name="parameters" element="tns:GonderiGuncelleResponse" />
+  </wsdl:message>
+  <wsdl:portType name="EDwsSoap">
+    <wsdl:operation name="KurumlariGetir">
+      <wsdl:input message="tns:KurumlariGetirSoapIn" />
+      <wsdl:output message="tns:KurumlariGetirSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DilekceGetir">
+      <wsdl:input message="tns:DilekceGetirSoapIn" />
+      <wsdl:output message="tns:DilekceGetirSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DilekceBul">
+      <wsdl:input message="tns:DilekceBulSoapIn" />
+      <wsdl:output message="tns:DilekceBulSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AndroidGorevliGiris">
+      <wsdl:input message="tns:AndroidGorevliGirisSoapIn" />
+      <wsdl:output message="tns:AndroidGorevliGirisSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="JSONGonderileriGetir">
+      <wsdl:input message="tns:JSONGonderileriGetirSoapIn" />
+      <wsdl:output message="tns:JSONGonderileriGetirSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AndroidDilekceyiGetir">
+      <wsdl:input message="tns:AndroidDilekceyiGetirSoapIn" />
+      <wsdl:output message="tns:AndroidDilekceyiGetirSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="IlceleriCek">
+      <wsdl:input message="tns:IlceleriCekSoapIn" />
+      <wsdl:output message="tns:IlceleriCekSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="KurumEkle">
+      <wsdl:input message="tns:KurumEkleSoapIn" />
+      <wsdl:output message="tns:KurumEkleSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DilekceEkle">
+      <wsdl:input message="tns:DilekceEkleSoapIn" />
+      <wsdl:output message="tns:DilekceEkleSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GorevliEkle">
+      <wsdl:input message="tns:GorevliEkleSoapIn" />
+      <wsdl:output message="tns:GorevliEkleSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GonderiEkle">
+      <wsdl:input message="tns:GonderiEkleSoapIn" />
+      <wsdl:output message="tns:GonderiEkleSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="KurumGiris">
+      <wsdl:input message="tns:KurumGirisSoapIn" />
+      <wsdl:output message="tns:KurumGirisSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GorevliGiris">
+      <wsdl:input message="tns:GorevliGirisSoapIn" />
+      <wsdl:output message="tns:GorevliGirisSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GorevliBilgileriniGetir">
+      <wsdl:input message="tns:GorevliBilgileriniGetirSoapIn" />
+      <wsdl:output message="tns:GorevliBilgileriniGetirSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="KurumBilgileriniGetir">
+      <wsdl:input message="tns:KurumBilgileriniGetirSoapIn" />
+      <wsdl:output message="tns:KurumBilgileriniGetirSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GonderileriGetir">
+      <wsdl:input message="tns:GonderileriGetirSoapIn" />
+      <wsdl:output message="tns:GonderileriGetirSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="KurumGorevlileriniGetir">
+      <wsdl:input message="tns:KurumGorevlileriniGetirSoapIn" />
+      <wsdl:output message="tns:KurumGorevlileriniGetirSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GonderileriGetirKurum">
+      <wsdl:input message="tns:GonderileriGetirKurumSoapIn" />
+      <wsdl:output message="tns:GonderileriGetirKurumSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GonderiGuncelle">
+      <wsdl:input message="tns:GonderiGuncelleSoapIn" />
+      <wsdl:output message="tns:GonderiGuncelleSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="EDwsSoap" type="tns:EDwsSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="KurumlariGetir">
+      <soap:operation soapAction="http://tempuri.org/KurumlariGetir" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DilekceGetir">
+      <soap:operation soapAction="http://tempuri.org/DilekceGetir" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DilekceBul">
+      <soap:operation soapAction="http://tempuri.org/DilekceBul" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AndroidGorevliGiris">
+      <soap:operation soapAction="http://tempuri.org/AndroidGorevliGiris" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="JSONGonderileriGetir">
+      <soap:operation soapAction="http://tempuri.org/JSONGonderileriGetir" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AndroidDilekceyiGetir">
+      <soap:operation soapAction="http://tempuri.org/AndroidDilekceyiGetir" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="IlceleriCek">
+      <soap:operation soapAction="http://tempuri.org/IlceleriCek" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="KurumEkle">
+      <soap:operation soapAction="http://tempuri.org/KurumEkle" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DilekceEkle">
+      <soap:operation soapAction="http://tempuri.org/DilekceEkle" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GorevliEkle">
+      <soap:operation soapAction="http://tempuri.org/GorevliEkle" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GonderiEkle">
+      <soap:operation soapAction="http://tempuri.org/GonderiEkle" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="KurumGiris">
+      <soap:operation soapAction="http://tempuri.org/KurumGiris" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GorevliGiris">
+      <soap:operation soapAction="http://tempuri.org/GorevliGiris" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GorevliBilgileriniGetir">
+      <soap:operation soapAction="http://tempuri.org/GorevliBilgileriniGetir" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="KurumBilgileriniGetir">
+      <soap:operation soapAction="http://tempuri.org/KurumBilgileriniGetir" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GonderileriGetir">
+      <soap:operation soapAction="http://tempuri.org/GonderileriGetir" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="KurumGorevlileriniGetir">
+      <soap:operation soapAction="http://tempuri.org/KurumGorevlileriniGetir" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GonderileriGetirKurum">
+      <soap:operation soapAction="http://tempuri.org/GonderileriGetirKurum" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GonderiGuncelle">
+      <soap:operation soapAction="http://tempuri.org/GonderiGuncelle" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="EDwsSoap12" type="tns:EDwsSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="KurumlariGetir">
+      <soap12:operation soapAction="http://tempuri.org/KurumlariGetir" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DilekceGetir">
+      <soap12:operation soapAction="http://tempuri.org/DilekceGetir" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DilekceBul">
+      <soap12:operation soapAction="http://tempuri.org/DilekceBul" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AndroidGorevliGiris">
+      <soap12:operation soapAction="http://tempuri.org/AndroidGorevliGiris" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="JSONGonderileriGetir">
+      <soap12:operation soapAction="http://tempuri.org/JSONGonderileriGetir" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AndroidDilekceyiGetir">
+      <soap12:operation soapAction="http://tempuri.org/AndroidDilekceyiGetir" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="IlceleriCek">
+      <soap12:operation soapAction="http://tempuri.org/IlceleriCek" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="KurumEkle">
+      <soap12:operation soapAction="http://tempuri.org/KurumEkle" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DilekceEkle">
+      <soap12:operation soapAction="http://tempuri.org/DilekceEkle" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GorevliEkle">
+      <soap12:operation soapAction="http://tempuri.org/GorevliEkle" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GonderiEkle">
+      <soap12:operation soapAction="http://tempuri.org/GonderiEkle" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="KurumGiris">
+      <soap12:operation soapAction="http://tempuri.org/KurumGiris" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GorevliGiris">
+      <soap12:operation soapAction="http://tempuri.org/GorevliGiris" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GorevliBilgileriniGetir">
+      <soap12:operation soapAction="http://tempuri.org/GorevliBilgileriniGetir" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="KurumBilgileriniGetir">
+      <soap12:operation soapAction="http://tempuri.org/KurumBilgileriniGetir" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GonderileriGetir">
+      <soap12:operation soapAction="http://tempuri.org/GonderileriGetir" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="KurumGorevlileriniGetir">
+      <soap12:operation soapAction="http://tempuri.org/KurumGorevlileriniGetir" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GonderileriGetirKurum">
+      <soap12:operation soapAction="http://tempuri.org/GonderileriGetirKurum" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GonderiGuncelle">
+      <soap12:operation soapAction="http://tempuri.org/GonderiGuncelle" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="EDws">
+    <wsdl:port name="EDwsSoap" binding="tns:EDwsSoap">
+      <soap:address location="http://localhost:4974/EDws.asmx" />
+    </wsdl:port>
+    <wsdl:port name="EDwsSoap12" binding="tns:EDwsSoap12">
+      <soap12:address location="http://localhost:4974/EDws.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

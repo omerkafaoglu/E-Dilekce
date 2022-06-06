@@ -1,0 +1,69 @@
+﻿body {
+    background-image: url('Images/kurumarka.png');
+}
+#anadiv {
+    width: 595px;
+    height: 842px;
+    position:relative;
+    left:350px;
+    background-color: #FFFAFA;
+    box-shadow: 10px 10px 10px 5px #888888;
+    padding-left:40px;
+    padding-right:40px;
+}
+#Baslik {
+    position:relative;
+    left:50px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+#Sehir {
+    position: relative;
+    left: 420px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+#Konu {
+    position: relative;
+    left:0px;
+}
+#Govde{
+    position:relative;
+    margin-left:40px;
+}
+#Tarih {
+    position: relative;
+    left:430px;
+    top:360px;
+}
+#GAdSoyad {
+    position: relative;
+    left: 430px;
+    top: 375px;
+}
+#Button2 {
+    position: relative;
+    left: 330px;
+    top: 415px; 
+}
+#Button1 {
+    position: relative;
+    left: 90px;
+    top: 395px;
+}
+#DropDownList1 {
+    position: relative;
+    left: 60px;
+    top: 395px;
+}
+#Label1 {
+    color:darkred;
+    font-weight:bold;
+    position: relative;
+    left: 120px;
+    top: 395px;
+}
+#cikis{
+    position:relative;
+    left:100px;
+}
